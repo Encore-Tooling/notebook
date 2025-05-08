@@ -70,9 +70,9 @@ import { Menu, Widget } from '@lumino/widgets';
 const TREE_PATTERN = new RegExp('/(notebooks|edit)/(.*)');
 
 /**
- * A regular expression to suppress the file extension from display for .ipynb files.
+ * A regular expression to suppress the file extension from display for jupyter files.
  */
-const STRIP_IPYNB = /\.ipynb$/;
+const STRIP_IPYNB = /\jupyter$/;
 
 /**
  * The JupyterLab document manager plugin id.
@@ -564,7 +564,7 @@ const tabTitle: JupyterFrontEndPlugin<void> = {
           const title =
             current.sessionContext.path || current.sessionContext.name;
           const basename = PathExt.basename(title);
-          // Strip the ".ipynb" suffix from filenames for display in tab titles.
+          // Strip the "jupyter" suffix from filenames for display in tab titles.
           document.title = basename.replace(STRIP_IPYNB, '');
         };
         current.sessionContext.sessionChanged.connect(update);

@@ -54,7 +54,7 @@ const opener: JupyterFrontEndPlugin<IDocumentWidgetOpener> = {
           const ext = PathExt.extname(path);
           let route = 'edit';
           if (
-            (widgetName === 'default' && ext === '.ipynb') ||
+            (widgetName === 'default' && ext === '.jupyter') ||
             widgetName.includes('Notebook')
           ) {
             // make sure to save the notebook before opening it in a new tab
