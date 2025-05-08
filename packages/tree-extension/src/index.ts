@@ -375,7 +375,7 @@ const notebookTreeWidget: JupyterFrontEndPlugin<INotebookTree> = {
 
     const trans = translator.load('notebook');
 
-    browser.title.label = trans.__('Files');
+    browser.title.label = trans.__('Filesxx');
     browser.node.setAttribute('role', 'region');
     browser.node.setAttribute('aria-label', trans.__('File Browser Section'));
     browser.title.icon = folderIcon;
